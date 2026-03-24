@@ -1,0 +1,35 @@
+body {
+    max-width: 70em;
+}
+
+img {
+    /* Center images horizontally */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media screen and (min-width: 60em) {
+    body {
+        display: grid;
+        /* Kind of silly, but adding a bunch of nav rows ensures the main
+         * paragraphs get packed in next to the table of contents. */
+        grid-template-areas: "heading heading" ". nav" ". nav" ". nav" ". nav" ". nav";
+    }
+
+    #title-block-header {
+        grid-area: heading;
+    }
+
+    #TOC {
+        grid-area: nav;
+        position: sticky;
+        top: 2rem;
+        padding-left: 1em;
+    }
+
+    body > * {
+        grid-column: 1;
+    }
+}
+

@@ -1,0 +1,42 @@
+palettes:
+  - name: global_palette
+    fixed-entries:
+      # The palette entries here are matched to names in colors.h;
+      # changes to the image must be reflected in the header.
+      - image: palette_system_winvga_web216.png
+    # This palette intentionally doesn't use any input images; outputs
+    # are limited to web-safe colors or the "standard" system colors defined
+    # by the fixed entries.
+
+converts:
+  - name: sprites
+    palette: global_palette
+    images:
+      - window_controls.png
+      - broken_image.png
+      - mistakes_illus.png
+  - name: transparent_sprites
+    palette: global_palette
+    style: rlet
+    images:
+      - cursor_pointer.png
+      - hotsingles_left.png
+      - hotsingles_right.png
+      - chibi_goku_80px_web.png
+      - chibi_vegeta_80px_web.png
+      - strongbad.png
+      - gotmilk.png
+      - aol_logo.png
+      - sportscar.png
+      - r2unit.png
+      - allyourbase.png
+
+outputs:
+  - type: c
+    const: true
+    include-file: gfx.h
+    palettes:
+      - global_palette
+    converts:
+      - sprites
+      - transparent_sprites
