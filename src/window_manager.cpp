@@ -97,6 +97,7 @@ Window *WindowManager::createWindow() {
         CREATECASE(8, PersonalityTest)
         CREATECASE(9, AllYourBase)
         CREATECASE(10, Ticalc)
+        CREATECASE(11, EthanTang)
         goto createWrap;
 
         default:
