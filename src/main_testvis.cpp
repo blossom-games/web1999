@@ -53,7 +53,7 @@ DRAWFUNC(PersonalityTest)
 DRAWFUNC(AllYourBase)
 DRAWFUNC(Ticalc)
 DRAWFUNC(Credits)
-
+DRAWFUNC(EthanTang)
 #define DRAWFUNC_P(t)                                                                  \
     { #t, draw##t }
 
@@ -76,6 +76,7 @@ static const struct {
         DRAWFUNC_P(AllYourBase),
         DRAWFUNC_P(Ticalc),
         DRAWFUNC_P(Credits),
+        DRAWFUNC_P(EthanTang),
 };
 
 static const unsigned N_MODES = sizeof(MODES) / sizeof(*MODES);
