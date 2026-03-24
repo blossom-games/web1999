@@ -345,4 +345,25 @@ void Ticalc::draw(bool active) const {
                           c.y + 2 + (i * 9));
     }
 }
+EthanTang::EthanTang(int x, uint8_t y) : Window(x, y, 120, 110, "Ethan Tang") {}
 
+void EthanTang::draw(bool active) const {
+    Window::draw(active);
+    const auto c = getContentArea();
+
+    gfx_SetTextBGColor(255);
+    gfx_SetTextFGColor(C_MAROON);
+    gfx_PrintStringXY("Contact", c.x + 3, c.y + 2);
+    gfx_SetTextFGColor(C_RED);
+    gfx_PrintStringXY("ETHAN TANG!", c.x + 17, c.y + 12);
+
+    gfx_SetTextFGColor(C_BLACK);
+    gfx_PrintStringXY("Rarest human", c.x + 5, c.y + 28);
+    gfx_PrintStringXY("on the internet.", c.x + 5, c.y + 38);
+    gfx_PrintStringXY("Only 1 exists!", c.x + 5, c.y + 48);
+
+    gfx_SetColor(C_GREEN);
+    gfx_FillRectangle(c.x + 4, c.y + 66, 100, 15);
+    gfx_SetTextFGColor(C_WHITE);
+    gfx_PrintStringXY("CONTACT NOW!", c.x + 13, c.y + 70);
+}
