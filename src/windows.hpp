@@ -29,3 +29,4 @@ WINTYPE(AolMailer);
 WINTYPE(PersonalityTest);
 WINTYPE_FILL(AllYourBase);
 WINTYPE(Ticalc);
+WINTYPE(EthanTang);
