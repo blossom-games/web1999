@@ -10,7 +10,7 @@ private:
     /*
      * Window order as index into the instances array. Topmost window comes first.
      */
-    uint8_t order[11];
+    uint8_t order[12];
     /*
      * Dynamically allocated window instances, indexed by semi-arbitrary type ID.
      *
@@ -21,7 +21,7 @@ private:
      * the compiler generates an out-of-range IY offset when object size exceeds 127
      * bytes.
      */
-    Window *instances[11];
+    Window *instances[12];
 
 public:
     /**
